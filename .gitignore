@@ -6,3 +6,5 @@
 # Unignore all dirs
 !*/
 .vscode
+test*.cpp
+template.cpp
