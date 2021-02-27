@@ -51,13 +51,13 @@ int main() {
   /* for (int i = 20; i > 0; i--) {
     a.push_back(i);
   } */
-  for (int i = 1; i <= 20; i++) {
+  for (int i = 0; i < 1e6; i++) {
     a.push_back(i);
   }
 
   // insertion_sort(a, 3, 10);
 
-  insertion_sort_rev(a, 3, 10);
+  insertion_sort_rev(a);
   for (auto i : a) {
     std::cout << i << ' ';
   }
