@@ -2,6 +2,7 @@
 
 std::vector<int> add_binary(
     const std::vector<int> &a, const std::vector<int> &b) {
+  assert(a.size() == b.size());
   int result_size = a.size() + 1;
   std::vector<int> result(result_size);
   int i = a.size() - 1;
