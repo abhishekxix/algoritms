@@ -2,13 +2,14 @@
   "default cpp code": {
     "prefix": "##",
     "body": [
-      "#include <iostream>\n\n",
+      "#include <bits/stdc++.h>\n\n",
       "int main() {\n",
       "  $0return 0;\n",
       "}"
     ],
     "description": "Generate generic c++ file template"
   },
+
   "algorithms cpp code": {
     "prefix": "#",
     "body": [
@@ -213,7 +214,7 @@
       "",
       "//start solving the problem in this function.",
       "void solve() {",
-      "  std::cout << 1 << std::endl;",
+      "  $0",
       "}",
       "",
       "int main() {",

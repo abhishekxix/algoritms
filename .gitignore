@@ -8,3 +8,5 @@
 .vscode
 test*.cpp
 template.cpp
+input.txt
+output.txt
