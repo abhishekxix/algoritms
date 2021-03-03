@@ -235,7 +235,7 @@ ll modulo(ll a, ll b) {
 void solve() {
   srand(time(nullptr));
 
-  int n = 1000000000;
+  int n = 20000;
   std::cout << n << "\n";
 
   while (n--) {

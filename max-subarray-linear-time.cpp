@@ -236,26 +236,25 @@ std::pair<Range, ll> max_subarray_sum(const std::vector<ll> &a) {
   ll low = 0;
   ll max_sum = INT_MIN;
   ll current_sum = 0;
-  ll i = 0;
-  ll j = 0;
+  ll current_low = 0;
+  ll current_high = 0;
 
-  while (i < a.size() and j < a.size()) {
-    current_sum += a.at(j);
-    if (i < j and current_sum - a.at(i) > max_sum) {
-      current_sum = max_sum = current_sum - a.at(i);
-      i++;
-      low = i;
+  for (int i = 0; i < a.size(); i++) {
+    current_high = i;
+
+    if (current_sum > 0) {
+      current_sum += a.at(i);
+    } else {
+      current_low = i;
+      current_sum = a.at(i);
     }
 
     if (current_sum > max_sum) {
-      low = i;
-      high = j;
+      high = current_high;
+      low = current_low;
       max_sum = current_sum;
     }
-
-    j++;
   }
-
   return std::make_pair(Range(low, high), max_sum);
 }
 

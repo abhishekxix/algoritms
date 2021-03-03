@@ -103,6 +103,15 @@ std::pair<Range, int> maximum_subarray(
 }
 
 int main() {
+  std::cin.tie(nullptr);
+  std::cout.tie(nullptr);
+  std::ios::sync_with_stdio(false);
+
+#ifndef ONLINE_JUDGE
+  freopen("input.txt", "r", stdin);
+  freopen("output1.txt", "w", stdout);
+#endif
+
   std::vector<int> a{};
   int n;
   std::cout << "Enter the number of elements in the array: ";
