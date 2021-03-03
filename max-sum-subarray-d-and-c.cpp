@@ -103,7 +103,18 @@ std::pair<Range, int> maximum_subarray(
 }
 
 int main() {
-  std::vector<int> a{13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
+  std::vector<int> a{};
+  int n;
+  std::cout << "Enter the number of elements in the array: ";
+  std::cin >> n;
+
+  std::cout << "Enter the elements of the array: ";
+
+  while (n--) {
+    int i;
+    std::cin >> i;
+    a.push_back(i);
+  }
   std::pair<Range, int> largest_subarray = maximum_subarray(a, 0, a.size() - 1);
 
   std::cout << "(" << largest_subarray.first.low() << ", "
